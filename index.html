@@ -19,36 +19,55 @@
 
 <div class="container">
 
-    <h2>
+    <center>
+    <h3>
         Multimodal Humor Dataset: Predicting Laughter tracks for Sitcoms
-    </h2>
-    <h6 style="color: gray">
-        WACV'21
+    </h3>
+    <h6 style="color: #9A2617">Badri N. Patro<sup>1*</sup>&ensp;   Mayank Lunayach<sup>1*</sup>&ensp;    Deepankar Srivastav<sup>1</sup>&ensp;    Sarvesh<sup>1</sup>&ensp;    Hunar Singh<sup>1</sup>&ensp;    Vinay P. Namboodiri<sup>1</sup></h6>
+        <div style="color: gray"><sup>1</sup><a href="https://www.iitk.ac.in/">IIT Kanpur</a>, *equal contribution</div>
+        <br>
+        <h6>
+        In WACV 2021
     </h6>
+    </center>
     <hr>
-
-    <ul>
-        <li>
-            <h4><u>Demo Video</u></h4>
-            <br>
             <div style="text-align: center">
+                <div class="thumbnail">
                 <div class="embed-responsive embed-responsive-4by3" style="width: 50%; left: 27%">
                     <iframe class="embed-responsive-item" src="demo_video.3gp"></iframe>
                 </div>
+                    <div class="caption" style="color: #6d757d">Task example</div>
+                </div>
             </div>
             <br><br>
-        </li>
+    <hr>
+        <h4>Download Dataset</h4>
+        <ul>
         <li>
-            <h4><a href="Code.zip"><u>The source code of one of our models as an example code</u></a></h4>            <br>
+            <a href="example_dataset.json">Dataset sample (consisting of randomly sampled 400 dialogues)</a>
+        </li>
+            <li>
+                <a href="Dataset.zip">Full dataset (compressed in a zip file)</a>
+                <br><br>
+                The dataset folder has the following directory structure:
+                <br>
 
-        </li>
-        <li>
-            <h4><a href="example_dataset.json"><u>An example subset of
-                our text dataset consisting of randomly sampled 400 dialogues</u></a></h4>            <br>
 
-        </li>
-        <li>
-            <h4><u>Additional Plots/Figures</u></h4>
+                <code>
+                    |-- DT_{<b>N</b>}<br>
+                        |   |-- Raw<br>
+                    |   |   |-- S{<b>M</b>}<br>
+                    |   |   |   |-- The Big Bang_S0{<b>M</b>}{<b>I</b>}.json<br>
+                        |   |-- test.json<br>
+                        |   |-- train.json<br>
+                        |   `-- val.json<br>
+                    <br>
+                </code>
+                where <code><b>N</b></code> is the no. of dialogue turns for that sub dataset, <code><b>M</b></code> represents the season of the series (varies from 1 to 5) and <code><b>I</b></code> represents the episode number in that season (like 01, 02, and so on).
+                Episode level extracted dialogues are in the <code>Raw</code> folder. Dialogues split into the train, val, and test categories are in <code>train.json</code>, <code>val.json</code>, and <code>test.json</code>, respectively.
+        </ul>
+    <hr>
+            <h4>Additional Plots/Figures</h4>
             <br>
 
 
@@ -268,16 +287,9 @@
             <br>
             <br>
             <br>
-
-        </li>
-
-    </ul>
-
-
     <br><br>
 
 
 </div>
-
 </body>
 </html>
